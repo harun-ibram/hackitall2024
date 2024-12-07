@@ -1,0 +1,23 @@
+{
+  "name": "hackitall2024",
+  "version": "1.0.0",
+  "description": "README",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harun-ibram/hackitall2024.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harun-ibram/hackitall2024/issues"
+  },
+  "homepage": "https://github.com/harun-ibram/hackitall2024#readme",
+  "dependencies": {
+    "convert-array-to-csv": "^2.0.0"
+  }
+}
