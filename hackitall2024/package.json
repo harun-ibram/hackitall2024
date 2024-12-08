@@ -12,19 +12,11 @@
     "@types/convert-array-to-csv": "^2.0.2",
     "convert-array-to-csv": "^2.0.0",
     "typescript": "~5.6.2",
-<<<<<<< HEAD
     "vite": "^6.0.3"
   },
   "dependencies": {
     "@types/google.maps": "^3.58.1",
     "@types/node": "^22.10.1",
     "fs": "^0.0.1-security"
-=======
-    "vite": "^6.0.1"
-  },
-  "dependencies": {
-    "@types/google.maps": "^3.58.1",
-    "papaparse": "^5.4.1"
->>>>>>> b53b980 (Implements server!)
   }
 }
