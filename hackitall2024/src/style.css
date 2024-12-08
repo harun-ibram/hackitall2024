@@ -95,8 +95,33 @@ button:focus-visible {
   }
 }
 
-#myClass {
-	height:100px;
-	width: 100vw;
-	display: flex;
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.map {
+  flex-grow: 1;
+  height: 1000px;
+  width: 1000px;
+}
+
+.header {
+  padding: 20px;
+  background-color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*
+ * Optional: Makes the sample page fill the window.
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
