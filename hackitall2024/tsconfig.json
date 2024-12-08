@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+<<<<<<< HEAD
+=======
+    "types": ["@types/google.maps"],
+>>>>>>> 6e54a2cdfa911f9b1b532f634dbf2d2cea956b90
     "target": "ES2020",
     "useDefineForClassFields": true,
     "module": "ESNext",
@@ -20,5 +24,9 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
+<<<<<<< HEAD
   "include": ["src"]
+=======
+  "include": ["src", "global.d.ts"],
+>>>>>>> 6e54a2cdfa911f9b1b532f634dbf2d2cea956b90
 }
