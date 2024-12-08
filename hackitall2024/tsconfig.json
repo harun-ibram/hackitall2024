@@ -1,16 +1,10 @@
 {
-<<<<<<< HEAD
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
-=======
+  ],
   "compilerOptions": {
-<<<<<<< HEAD
-=======
-    "types": ["@types/google.maps"],
->>>>>>> 6e54a2cdfa911f9b1b532f634dbf2d2cea956b90
     "target": "ES2020",
     "useDefineForClassFields": true,
     "module": "ESNext",
@@ -31,10 +25,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-<<<<<<< HEAD
-  "include": ["src"]
-=======
-  "include": ["src", "global.d.ts"],
->>>>>>> 6e54a2cdfa911f9b1b532f634dbf2d2cea956b90
->>>>>>> c9b79221f7ea7c2ddc8dd6a5e82d6bb14f563b23
+  "include": ["src", "global.d.ts"]
 }
