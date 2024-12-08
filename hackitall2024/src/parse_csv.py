@@ -21,6 +21,25 @@ class Mega:
         self.residential = None
         self.radius = None
 
+    def create_radius(self):
+        a, b, c = fit_model()
+        bucharestDensity = 8260
+
+        self.radius = (a / (bucharestDensity + b) + c) / 2
+        self.radius -= self.uni * 5
+        self.radius -= self.park * 1
+        self.radius -= self.entertainment * 4
+        self.radius -= self.night_club * 1
+        self.radius -= self.gov_building * 0.5
+        self.radius -= self.hospital * 0.5
+        self.radius -= self.gym * 0.5
+        self.radius -= self.public_transport * 0.5
+        self.radius -= self.school * 2
+        self.radius -= self.offices * 3
+        self.radius -= self.residential * 2
+        self.radius += self.mall * 20
+        self.radius += self.other_stores * 10
+        
     def from_csv(csv_file_path):
         mega_instances = []
         with open(csv_file_path, mode='r', newline='') as file:
@@ -43,36 +62,8 @@ class Mega:
                 mega.residential = int(row['residential!'])
                 mega.lat = float(row['lat!'])
                 mega.lng = float(row['lng!'])
-                mega_instances.append(mega)
+                mega.create_radius()
+
+                mega_instances.append((mega.lat, mega.lng, mega.radius))
                 
         return mega_instances
-            
-    def create_radius(self):
-        a, b, c = fit_model()
-        bucharestDensity = 8260
-
-        self.radius = (a / (bucharestDensity + b) + c) / 2
-        self.radius -= self.uni * 5
-        self.radius -= self.park * 1
-        self.radius -= self.entertainment * 4
-        self.radius -= self.night_club * 1
-        self.radius -= self.gov_building * 0.5
-        self.radius -= self.hospital * 0.5
-        self.radius -= self.gym * 0.5
-        self.radius -= self.public_transport * 0.5
-        self.radius -= self.school * 2
-        self.radius -= self.offices * 3
-        self.radius -= self.residential * 2
-        self.radius += self.mall * 20
-        self.radius += self.other_stores * 10
-        
-
-# Example usage
-if __name__ == "__main__":
-    mega_instances =  Mega.from_csv('test.csv')
-    
-    for mega in mega_instances:
-        print(f"Longitude: {mega.lat}")
-        print(f"Latitude: {mega.lng}")
-        
-    
